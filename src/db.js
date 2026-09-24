@@ -1,4 +1,11 @@
-import 'dotenv/config';
+try {
+    const { config } = await
+    import ('dotenv');
+    config();
+} catch {
+    // Vercel provides environment variables directly.
+}
+
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
 
