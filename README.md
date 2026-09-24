@@ -189,6 +189,21 @@ DATABASE_URL=your_database_connection_string
 
 Set `DATABASE_URL` in `.env`. Never commit `.env` or share its value.
 
+## Vercel Deployment
+
+This project is prepared to run on Vercel as a serverless API.
+
+1. Import the repo into Vercel.
+2. Use the root directory as the project root.
+3. Set the environment variable `DATABASE_URL` in the Vercel project settings.
+4. Keep the default install command: `npm install`
+5. No custom build command is required for this setup.
+
+The API routes are served from:
+
+- `/api/login`
+- `/api/change-password`
+
 ## Render Deployment
 
 - Build command: `npm install`
