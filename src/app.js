@@ -1,4 +1,11 @@
-import 'dotenv/config';
+try {
+    const { config } = await
+    import ('dotenv');
+    config();
+} catch {
+    // Vercel supplies environment variables directly, so this is optional.
+}
+
 import express from 'express';
 import { eq } from 'drizzle-orm';
 import { db } from './db.js';
